@@ -1,7 +1,7 @@
 
 # Portfolio website
 
-Hi, I'm Nikita, this is my small portfolio of projects and overall info about me. 
+Hi, I'm Nikita, this is my small portfolio
 
 I know that a lot of stuff should be added here, but this is only v1
 
