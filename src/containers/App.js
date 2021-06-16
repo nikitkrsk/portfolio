@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Switch, withRouter } from "react-router-dom";
-import axios from "axios";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
@@ -26,26 +25,6 @@ const App = ({ _, history }) => {
   const theme = createMuiTheme(themesConfig[state.theme]);
   const dispatch = useDispatch();
 
-  const getGeoInfo = () => {
-    axios
-      .get("https://ipapi.co/json/")
-      .then((response) => {
-        let data = response.data;
-        console.log(data);
-        // this.setState({
-        //     countryName: data.country_name,
-        //     countryCode: data.country_calling_code
-        // });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  // Executes only ones - Do not use
-  useEffect(() => {
-    getGeoInfo();
-  }, []);
-  // Executes every Page change
   useEffect(() => {
     let pathname;
     try {
@@ -59,7 +38,6 @@ const App = ({ _, history }) => {
   }, [history.location.pathname]);
 
   const routeComponents = Routes.map(({ path, Component }, key) => (
-    // <Route exact path={path} component={component} key={key} />
     <Route
       exact
       path={path}
