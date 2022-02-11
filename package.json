@@ -13,7 +13,7 @@
     "creepyface": "^7.4.8",
     "hamburger-react": "^2.4.0",
     "material-ui": "^0.20.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-creepyface": "^7.4.8",
